@@ -9,7 +9,12 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
 html {
     color: #222;
     font-size: 1em;
@@ -95,6 +100,40 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#page{
+      background-color: beige;
+}
+#headerInner{
+      background-color: red;
+}
+#contents-sidebar{
+      background-color: grey;
+}
+#contents{
+      background-color: yellow;
+}
+#sidebar{
+      background-color: green;
+}
+#footerInner{
+      background-color: blue;
+}
+
+
+/* --- test footer ---- */
+
+#main {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -80px;
+}
+#main:after {
+  content: "";
+  display: block;
+}
+#footer, #main:after {
+  height: 80px;
+}
 
 
 
