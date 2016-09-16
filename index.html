@@ -15,6 +15,11 @@
         <link rel="stylesheet" href="css/fluid_grid.css" />
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://use.fontawesome.com/ce164d405b.js"></script>
+
+
         <!--[if IE 8]>
         <script src="js/respond.min.js" defer></script>
         <![endif]-->
@@ -30,6 +35,8 @@
     <!--[if (gt IE 9)|!(IE)]><!--> 
     <body > <!--<![endif]-->
 
+    <div id="page">    
+
         <header id="header">
             <div class="container-col">
                 <div class="row clearfix">
@@ -39,25 +46,138 @@
                         </div>
                         <div class="login"> John Doe | Groupe Assistance | FR</div>
                         <div class="search"></div>
-                        <div class="accessibility">+A -a</div>
+                        <div class="accessibility">
+                            <div id="plustext" onclick="resizeText(1)" alt="Increase text size" title="Increase text size">
+                                <i class="fa fa-plus" aria-hidden="true"></i>A
+                            </div>
+                            <div id="minustext" onclick="resizeText(-1)" alt="Decrease text size" title="Decrease text size">   
+                                <i  class="fa fa-minus" aria-hidden="true" ></i>A
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
 
         <div id="main">
-            <div id="contents-sidebar" class="container-col" >
+            <div id="content-sidebar" class="container-col" >
                 <div class="row clearfix">
-                    .
-                    <article id="contents" class="col push-l-2 span-l-8 push-m-1 span-m-4 span-s-1">
-                            <h1>This is the Fluid Grid</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt enim blanditiis cum aliquam, quae expedita officia nam a perspiciatis. Facere facilis iure accusamus doloribus ipsam repudiandae, est praesentium laboriosam nesciunt!</p>
-                    </article>
 
-                    <aside id="sidebar" class="col pull-l-8 span-l-2 pull-m-4 span-m-1 span-s-1">
+
+                    <div id="content" class="col push-l-2 span-l-8 push-m-2 span-m-2 span-s-1">
+
+                        <div id="content-head" class=""><i class="fa fa-home" aria-hidden="true"></i> / parent / ... / dossier / dossier en cours <i class="fa fa-th right" aria-hidden="true"></i> <i class="fa fa-bars right" aria-hidden="true"></i></div>
+
+                        <article id="content-body" class="">
+                            <ul class="tile-list">
+                            <!-- 1ere ligne -->
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Outlook</h2>
+                                        <i class="fa fa-envelope-o big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Windows</h2>
+                                        <i class="fa fa-windows big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Office 365</h2>
+                                        <i class="fa fa-laptop big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Skype</h2>
+                                        <i class="fa fa-skype big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+                                <!-- 2eme ligne -->
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Téléchargement</h2>
+                                        <i class="fa fa-cloud-download big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Wifi</h2>
+                                         <i class="fa fa-wifi big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Imprimantes</h2>
+                                         <i class="fa fa-print big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Statistiques</h2>
+                                        <i class="fa fa-bar-chart big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+
+                                <!-- 3eme ligne -->
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Téléphone</h2>
+                                        <i class="fa fa-phone big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Apple</h2>
+                                        <i class="fa fa-apple big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Android</h2>
+                                        <i class="fa fa-android big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="tile" title="Partager avec un Ami" href="#">
+                                        <h2>Notes de frais</h2>
+                                        <i class="fa fa-money big" aria-hidden="true"></i>
+                                        <p>Partager sur Twitter, Facebook, ...</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <div id="content-footer" class=""><p><em>Zone pour affichage de widget en footer</em></p></div>
+
+                    </div>
+
+                    <aside id="sidebar" class="col pull-l-8 span-l-2 pull-m-2 span-m-2 span-s-1">
                         <div id="block-account" class="block-sidebar">
                             <div class="block-titre">
-                                Mon compte
+                                <i class="fa fa-user" aria-hidden="true"></i> Mon compte
                             </div>
                             <div class="block-content">
                               <ul>
@@ -73,7 +193,7 @@
 
                         <div id="block-news" class="block-sidebar">
                             <div class="block-titre">
-                                News
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> News
                             </div>
                             <div class="block-content">
                               <ul>
@@ -88,10 +208,10 @@
                         </div>
                     </aside>
 
-                    <aside id="sidebar2" class="col span-l-2 span-m-1 span-s-1">
+                    <aside id="sidebar2" class="col span-l-2 span-m-2 span-s-1">
                         <div id="block-bookmark" class="block-sidebar">
                             <div class="block-titre">
-                                Favoris
+                                <i class="fa fa-star" aria-hidden="true"></i> Favoris
                             </div>
                             <div class="block-content">
                               <ul>
@@ -108,7 +228,7 @@
 
                         <div id="block-help" class="block-sidebar">
                             <div class="block-titre">
-                                Aide
+                                <i class="fa fa-life-ring" aria-hidden="true"></i> Aide
                             </div>
                             <div class="block-content">
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita suscipit repudiandae laboriosam mollitia iusto quia fuga odio adipisci?</p>
@@ -117,7 +237,7 @@
 
                         <div id="block-top" class="block-sidebar">
                             <div class="block-titre">
-                                Top X
+                                <i class="fa fa-trophy" aria-hidden="true"></i> Top X
                             </div>
                             <div class="block-content">
                               <ul>
@@ -141,11 +261,12 @@
             <div class="container-col">
                 <div class="row clearfix">
                     <div id="footerInner" class="col span-l-12 span-m-6 span-s-1">
-                        <p>Ici doit prendre place le footer</p>
+                        <p>Powered by Knowesia</p>
                     </div>
                 </div>
             </div>
         </footer>
+    </div><!-- /page -->    
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
